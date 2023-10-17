@@ -23,7 +23,7 @@ import matplotlib.pyplot as plt
 plt.hist(ahr_df['value'],bins = 5)
 plt.show() # you can see most values fall in btw 0-20,000 and a couple thousand fall in between 20,000-40,000
 
-#Looking at values per state - WIP
+#Looking at values per state - WIP -- If agg gets too confusing in PY, just use SQL and create view and pull into DF with desired data format
 import plotly.express as px
 ahr_df["subpopulation"] = ahr_df["subpopulation"].astype(str)
 fig = px.bar(ahr_df, x="measure_name", y="value", color="subpopulation", title="Who were more probable to be able-bodied - Males or Females")
